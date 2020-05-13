@@ -1,0 +1,66 @@
+
+<h1>Your Text Analysis</h1>
+
+<h2>Number of Words: <%= @analyzed_text.count_of_words %></h2>
+
+<h2>Vowels: <%= @analyzed_text.count_of_vowels %></h2>
+
+<h2>Consonants: <%= @analyzed_text.count_of_consonants %></h2>
+
+
+
+
+
+
+
+In layout.erb, we need to add a yield wherever we want the other page content to be loaded:
+
+<!doctype html>
+<html>
+  <head>
+    <title>Cats</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+ 
+    <div class="container">
+      <h1>I love cats</h1>
+      <img src="https://s3.amazonaws.com/after-school-assets/cat-typing.gif">
+ 
+      <%= yield %>
+ 
+ 
+ 
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+
+index.erb
+<!doctype html>
+<html>
+  <head>
+    <title>Cats</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+ 
+    <div class="container">
+ 
+      <h1>I love cats</h1>
+      <img src="https://s3.amazonaws.com/after-school-assets/cat-typing.gif">
+ 
+      <h2>This cat...</h2>
+      <img src="https://s3.amazonaws.com/after-school-assets/cat.gif">
+ 
+ 
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
